@@ -49,13 +49,48 @@ let salaries = {
 
 // console.log(sumSalaries(salaries));
 
-let count = obj => {
-  return Object.keys(obj).length;
+// let count = obj => {
+//   return Object.keys(obj).length;
+// }
+
+// let user = {
+//   name: "John",
+//   age: 30
+// }
+
+// console.log(count(user));
+
+let unique = arr => {
+  return Array.from(new Set(arr));
 }
 
-let user = {
-  name: "John",
-  age: 30
-}
+let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-0"];
 
-console.log(count(user));
+// console.log(unique(values));
+
+// 5. Weak Map Weak Set
+
+let messages = [
+  {text: "Hello", from: "John"},
+  {text: "How goes?", from: "John"},
+  {text: "See you soon", from: "Alice"}
+];
+
+let readMessages = new WeakSet();
+
+readMessages.add(messages[0]);
+readMessages.add(messages[1]);
+
+readMessages.add(messages[0]);
+
+// console.log("Read message 0: " + readMessages.has(messages[0]));
+
+messages.shift();
+
+// 6. Date and time
+
+let date = new Date();
+
+console.log(date);
+
+
